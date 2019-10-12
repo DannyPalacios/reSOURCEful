@@ -1,25 +1,51 @@
+<!-- unocrruped harocxoed file -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="static/test.css">
-        <title>
-            reSOURCEful
-        </title>
-    </head>
-    <body>
-        <h3>
-            reSOURCEful
-        </h3>
-        <p>
-            Upload a photo of ingredients..<br>
-            <form method="post" enctype="multipart/form-data" action="/vision">
-		<input class="fileinputs" type="file" name="imageupload">
-		<input class="fileinputs" id="uploadimage" type="submit" name="uploadimage" value="Upload Image">
-	    </form>
-        </p>
-            {% for ingre in ing %}
-                <a href="https://google.com/search?">{{ ingre }}</a>
-            {% endfor %}
+<head>
+ <!--<link rel="stylesheet" type="text/css" href="style.css"></link> IDK HOW TO GET THE STYLE SHEET TO WORK :( --> 
+         <style>
+            body {
+                text-align: center;
+                background-color: powderblue;
+                font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+            }
+            h1 {
+                font: 14px 
+                
+            }
 
-    </body>
+            p {color: #696969;
+
+            }
+
+            a {
+                font: 80px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+            }
+
+        </style> 
+
+<title>
+    <a> reSOURCEful </a>
+</title>
+</head>
+<body>
+    <h1>
+        Are you reSOURCEful?
+        
+    </h1>
+    <p>
+        <img src="../templates/reSOURCEful.jpg" alt="reSOURCEful by Origins" width="500" height="600"> </p>
+    <p>
+        Upload a photo of ingredients..<br>
+        <form method="post" enctype="multipart/form-data" action="/vision">
+          <input class="fileinputs" type="file" name="imageupload">
+          <input class="fileinputs" id="uploadimage" type="submit" name="uploadimage" value="Upload Image">
+      </form>
+  </p>
+  {% for ingre in ing %}
+  <a href="https://google.com/search?">{{ ingre }}</a>
+  {% endfor %}
+
+</body>
 </html>
